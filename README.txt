@@ -21,5 +21,4 @@ Welcome to Luna Whirl, a whimsical yogurt brand inspired by the moon and crafted
         - Customer reviews features in a carousel style
 
 ## Live Demo
-    Webiste url:
-    
+    Webiste url: https://interface-design-and-development.github.io/web-interface-design-project-cristalwithani/
