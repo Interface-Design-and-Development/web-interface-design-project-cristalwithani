@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Luna Whirl</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+
+<body>
+  <nav>
+    <div class="logo">Luna Whirl</div>
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="about.html">Who We Are</a></li>
+      <li><a href="reviews.html">Reviews</a></li>
+	<li><a href="products.html">Products</a></li>
+    </ul>
+  </nav>
+
+  <main class="review-carousel">
+    <h1>What People Are Saying</h1>
+
+    <div class="review active">
+      <img src="Images/alex.jpg" alt="Alex" />
+      <div class="name">Alex</div>
+      <div class="location">Austin, TX</div>
+      <div class="stars">★★★★★</div>
+      <div class="text">“Luna Whirl’s Peach Galaxy changed my mornings forever!”</div>
+    </div>
+
+    <div class="review">
+      <img src="Images/jamie.jpg" alt="Jamie" />
+      <div class="name">Jamie</div>
+      <div class="location">Seattle, WA</div>
+      <div class="stars">★★★★★</div>
+      <div class="text">“The Moonberry Swirl is out of this world!”</div>
+    </div>
+
+    <div class="review">
+      <img src="Images/priya.jpg" alt="Priya" />
+      <div class="name">Priya</div>
+      <div class="location">Chicago, IL</div>
+      <div class="stars">★★★★★</div>
+      <div class="text">“My kids beg for Lunar Lemon every night.”</div>
+    </div>
+
+    <div class="carousel-controls">
+      <button onclick="changeReview(-1)">&larr;</button>
+      <button onclick="changeReview(1)">&rarr;</button>
+    </div>
+  </main>
+
+  <footer>
+    &copy; 2025 Luna Whirl. All rights reserved.
+  </footer>
+
+  <script>
+    let index = 0;
+    const reviews = document.querySelectorAll('.review');
+
+    function changeReview(direction) {
+      reviews[index].classList.remove('active');
+      index = (index + direction + reviews.length) % reviews.length;
+      reviews[index].classList.add('active');
+    }
+  </script>
+</body>
+</html>
